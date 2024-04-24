@@ -215,8 +215,6 @@ Tasks
 
 ### 0\. Keep every promise you make and only make promises you can keep
 
-mandatory
-
 Return a Promise using this prototype `function getResponseFromAPI()`
 
 ```
@@ -239,45 +237,9 @@ bob@dylan:~$
 - Directory: `0x01-ES6_promise`
 - File: `0-promise.js`
 
- Done? Help Check your code Get a sandbox
-
-**CODE IMPLEMENTATION**
-
-```
-/* eslint-disable no-unused-vars */
-export default function getResponseFromAPI() {
-  return new Promise((resolve, reject) => { });
-}
-```
-
-**cODE EXPLANATION**
-
-```
-Promises: Promises provide a way to handle asynchronous operations and represent their eventual completion or failure.
-ES6 introduced the Promise object, which has built-in methods such as then() and catch() for handling success and error cases.
-
-EXAMPLE
-----------------------------------
-function getDataFromAPI() {
-  return new Promise((resolve, reject) => {
-    // Asynchronous operation, e.g., API call
-    fetch('https://api.example.com/data')
-      .then(response => response.json())
-      .then(data => resolve(data))
-      .catch(error => reject(error));
-  });
-}
-
-// Usage:
-getDataFromAPI()
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
-
-```
 
 ### 1\. Don't make a promise...if you know you can't keep it
 
-mandatory
 
 Using the prototype below, return a `promise`. The parameter is a `boolean`.
 
@@ -321,11 +283,10 @@ bob@dylan:~$
 - Directory: `0x01-ES6_promise`
 - File: `1-promise.js`
 
- Done? Help Check your code Get a sandbox
+ 
 
 ### 2\. Catch me if you can
 
-mandatory
 
 Using the function prototype below
 
@@ -362,11 +323,10 @@ bob@dylan:~$
 - Directory: `0x01-ES6_promise`
 - File: `2-then.js`
 
- Done? Help Check your code Get a sandbox
+ 
 
 ### 3\. Handle multiple successful promises
 
-mandatory
 
 In this file, import `uploadPhoto` and `createUser` from `utils.js`
 
@@ -398,11 +358,10 @@ bob@dylan:~$
 - Directory: `0x01-ES6_promise`
 - File: `3-all.js`
 
- Done? Help Check your code Get a sandbox
+ 
 
 ### 4\. Simple promise
 
-mandatory
 
 Using the following prototype
 
@@ -441,11 +400,10 @@ bob@dylan:~$
 - Directory: `0x01-ES6_promise`
 - File: `4-user-promise.js`
 
- Done? Help Check your code Get a sandbox
+
 
 ### 5\. Reject the promises
 
-mandatory
 
 Write and export a function named `uploadPhoto`. It should accept one argument `fileName` (string).
 
@@ -480,11 +438,10 @@ bob@dylan:~$
 - Directory: `0x01-ES6_promise`
 - File: `5-photo-reject.js`
 
- Done? Help Check your code Get a sandbox
+ 
 
 ### 6\. Handle multiple promises
 
-mandatory
 
 Import `signUpUser` from `4-user-promise.js` and `uploadPhoto` from `5-photo-reject.js`.
 
@@ -520,7 +477,7 @@ bob@dylan:~$
 - Directory: `0x01-ES6_promise`
 - File: `6-final-user.js`
 
- Done? Help Check your code Get a sandbox
+
 
 ### 7\. Load balancer
 
@@ -577,11 +534,10 @@ bob@dylan:~$
 - Directory: `0x01-ES6_promise`
 - File: `7-load_balancer.js`
 
- Done? Help Check your code Get a sandbox
+ 
 
 ### 8\. Throw error / try catch
 
-mandatory
 
 Write a function named `divideFunction` that will accept two arguments: `numerator` (Number) and `denominator` (Number).
 
@@ -619,11 +575,10 @@ bob@dylan:~$
 - Directory: `0x01-ES6_promise`
 - File: `8-try.js`
 
- Done? Help Check your code Get a sandbox
+
 
 ### 9\. Throw an error
 
-mandatory
 
 Write a function named `guardrail` that will accept one argument `mathFunction` (Function).
 
@@ -662,3 +617,54 @@ bob@dylan:~$
 - GitHub repository: `alx-backend-javascript`
 - Directory: `0x01-ES6_promise`
 - File: `9-try.js`
+
+
+### 10\. Await / Async
+
+Import `uploadPhoto` and `createUser` from `utils.js`
+
+Write an async function named `asyncUploadUser` that will call these two functions and return an object with the following format:
+
+```
+{
+  photo: response_from_uploadPhoto_function,
+  user: response_from_createUser_function,
+}
+```
+
+If one of the async function fails, return an empty object. Example:
+
+```
+{
+  photo: null,
+  user: null,
+}
+```
+
+```
+bob@dylan:~$ cat 100-main.js
+import asyncUploadUser from "./100-await";
+
+const test = async () => {
+    const value = await asyncUploadUser();
+    console.log(value);
+};
+
+test();
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 100-main.js 
+{
+  photo: { status: 200, body: 'photo-profile-1' },
+  user: { firstName: 'Guillaume', lastName: 'Salva' }
+}
+bob@dylan:~$ 
+```
+
+**Repo:**
+
+- GitHub repository: `alx-backend-javascript`
+- Directory: `0x01-ES6_promise`
+- File: `100-await.js`
+
+
