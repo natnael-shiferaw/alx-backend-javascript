@@ -90,9 +90,6 @@ Tasks
 
 ### 0\. You used to attend a place like this at some point
 
-mandatory
-
-Score: 100.00% (Checks completed: 0.00%)
 
 Implement a class named `ClassRoom`:
 
@@ -119,43 +116,9 @@ bob@dylan:~$
 - Directory: `0x02-ES6_classes`
 - File: `0-classroom.js`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
-
-**CODE IMPLEMENTATION**
-
-```
-export default class ClassRoom {
-  constructor(maxStudentsSize) {
-    this._maxStudentsSize = maxStudentsSize;
-  }
-}
-```
-
-**CODE EXPLANATION**
-
-```
-The code you provided defines a JavaScript class called ClassRoom.
-It has a constructor that takes a parameter maxStudentsSize and assigns it to the instance property _maxStudentsSize.
-The _ prefix conventionally indicates that the property is intended to be private or internal.
-
-In the next part of the code, an instance of the ClassRoom class is created using the new keyword and passing 10 as the maxStudentsSize argument.
-This instance is assigned to the room variable.
-
-Finally, console.log(room._maxStudentsSize) is called, attempting to log the value of the _maxStudentsSize property of the room object.
-
-However, it's important to note that JavaScript does not enforce strict encapsulation or privacy for object properties.
-The use of the underscore prefix is merely a convention to indicate that a property should be treated as private or internal.
-It is still possible to access and modify _maxStudentsSize directly from outside the class, although it goes against the intention of encapsulation.
-
-In some JavaScript environments or linters, you might receive a warning or error about accessing a private property.
-However, in general, accessing _maxStudentsSize directly will work and log the value 10 in this case.
-```
-
+ 
 ### 1\. Let's make some classrooms
 
-mandatory
-
-Score: 100.00% (Checks completed: 0.00%)
 
 Import the `ClassRoom` class from `0-classroom.js`.
 
@@ -184,47 +147,9 @@ bob@dylan:~$
 - Directory: `0x02-ES6_classes`
 - File: `1-make_classrooms.js`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
-
-**CODE IMPLEMENTATION**
-
-```
-import ClassRoom from './0-classroom';
-
-export default function initializeRooms() {
-  return [new ClassRoom(19), new ClassRoom(20), new ClassRoom(34)];
-}
-```
-
-**CODE EXPLANATION**
-
-```
-
-Defining a JavaScript class ClassRoom with a constructor that takes a maxStudentsSize parameter and assigns it to the _maxStudentsSize property.
-
-Additionally, there is an exported function initializeRooms() that creates an array containing three instances of the ClassRoom class.
-Each instance is created with a different maxStudentsSize value.
-
-Finally, console.log(initializeRooms()) is called to log the result of invoking the initializeRooms() function, which is the array containing the three ClassRoom instances.
-
-When you run this code, it will output the array of ClassRoom instances as follows:
-
-----------------------------------------------------------------------------------
-[
-  ClassRoom { _maxStudentsSize: 19 },
-  ClassRoom { _maxStudentsSize: 20 },
-  ClassRoom { _maxStudentsSize: 34 }
-]
-----------------------------------------------------------------------------------
-
-Each element in the array represents an instance of the ClassRoom class, with the maxStudentsSize values of 19, 20, and 34 respectively.
-```
 
 ### 2\. A Course, Getters, and Setters
 
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
 
 Implement a class named `HolbertonCourse`:
 
@@ -281,13 +206,9 @@ bob@dylan:~$
 - Directory: `0x02-ES6_classes`
 - File: `2-hbtn_course.js`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
 
 ### 3\. Methods, static methods, computed methods names..... MONEY
 
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
 
 Implement a class named `Currency`:
 
@@ -318,13 +239,9 @@ bob@dylan:~$
 - Directory: `0x02-ES6_classes`
 - File: `3-currency.js`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
 
 ### 4\. Pricing
 
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
 
 Import the class `Currency` from `3-currency.js`
 
@@ -364,13 +281,9 @@ bob@dylan:~$
 - Directory: `0x02-ES6_classes`
 - File: `4-pricing.js`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
 
 ### 5\. A Building
 
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
 
 Implement a class named `Building`:
 
@@ -412,13 +325,10 @@ bob@dylan:~$
 - Directory: `0x02-ES6_classes`
 - File: `5-building.js`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
+
 
 ### 6\. Inheritance
 
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
 
 Import `Building` from `5-building.js`.
 
@@ -455,13 +365,9 @@ bob@dylan:~$
 - Directory: `0x02-ES6_classes`
 - File: `6-sky_high.js`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
 
 ### 7\. Airport
 
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
 
 Implement a class named `Airport`:
 
@@ -493,13 +399,9 @@ bob@dylan:~$
 - Directory: `0x02-ES6_classes`
 - File: `7-airport.js`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
 
 ### 8\. Primitive - Holberton Class
 
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
 
 Implement a class named `HolbertonClass`:
 
@@ -532,13 +434,9 @@ bob@dylan:~$
 - Directory: `0x02-ES6_classes`
 - File: `8-hbtn_class.js`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
 
 ### 9\. Hoisting
 
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
 
 Fix this code and make it work.
 
@@ -651,13 +549,9 @@ bob@dylan:~$
 - Directory: `0x02-ES6_classes`
 - File: `9-hoisting.js`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
 
 ### 10\. Vroom
 
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
 
 Implement a class named `Car`:
 
@@ -704,13 +598,9 @@ bob@dylan:~$
 - Directory: `0x02-ES6_classes`
 - File: `10-car.js`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
 
 ### 11\. EVCar
 
-# advanced
-
-Score: 0.00% (Checks completed: 0.00%)
 
 Import `Car` from `10-car.js`.
 
