@@ -1,4 +1,4 @@
-x03. ES6 data manipulation
+0x03. ES6 data manipulation
 ==========================
 
 ## `JavaScript` `ES6`
@@ -74,15 +74,87 @@ Configuration files
 
 ### `package.json`
 
-Click to show/hide file contents
+```
+{
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint",
+    "check-lint": "lint [0-9]*.js",
+    "dev": "npx babel-node",
+    "test": "jest",
+    "full-test": "./node_modules/.bin/eslint [0-9]*.js && jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.8.0",
+    "@babel/preset-env": "^7.6.0",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "jest": "^24.9.0"
+  }
+}
+```
 
 ### `babel.config.js`
 
-Click to show/hide file contents
+```
+module.exports = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          node: 'current',
+        },
+      },
+    ],
+  ],
+};
+
+```
 
 ### `.eslintrc.js`
 
-Click to show/hide file contents
+```
+module.exports = {
+  env: {
+    browser: false,
+    es6: true,
+    jest: true,
+  },
+  extends: [
+    'airbnb-base',
+    'plugin:jest/all',
+  ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  plugins: ['jest'],
+  rules: {
+    'max-classes-per-file': 'off',
+    'no-underscore-dangle': 'off',
+    'no-console': 'off',
+    'no-shadow': 'off',
+    'no-restricted-syntax': [
+      'error',
+      'LabeledStatement',
+      'WithStatement',
+    ],
+  },
+  overrides:[
+    {
+      files: ['*.js'],
+      excludedFiles: 'babel.config.js',
+    }
+  ]
+};
+```
 
 ### and
 
@@ -128,7 +200,6 @@ bob@dylan:~$
 - Directory: `0x03-ES6_data_manipulation`
 - File: `0-get_list_students.js`
 
- Done? Help Get a sandbox
 
 ### 1\. More mapping
 
@@ -164,7 +235,6 @@ bob@dylan:~$
 - Directory: `0x03-ES6_data_manipulation`
 - File: `1-get_list_student_ids.js`
 
- Done? Help Get a sandbox
 
 ### 2\. Filter
 
@@ -201,7 +271,6 @@ bob@dylan:~$
 - Directory: `0x03-ES6_data_manipulation`
 - File: `2-get_students_by_loc.js`
 
- Done? Help Get a sandbox
 
 ### 3\. Reduce
 
@@ -236,7 +305,6 @@ bob@dylan:~$
 - Directory: `0x03-ES6_data_manipulation`
 - File: `3-get_ids_sum.js`
 
- Done? Help Get a sandbox
 
 ### 4\. Combine
 
@@ -299,7 +367,6 @@ bob@dylan:~$
 - Directory: `0x03-ES6_data_manipulation`
 - File: `4-update_grade_by_city.js`
 
- Done? Help Get a sandbox
 
 ### 5\. Typed Arrays
 
@@ -337,7 +404,6 @@ bob@dylan:~$
 - Directory: `0x03-ES6_data_manipulation`
 - File: `5-typed_arrays.js`
 
- Done? Help Get a sandbox
 
 ### 6\. Set data structure
 
@@ -366,7 +432,6 @@ bob@dylan:~$
 - Directory: `0x03-ES6_data_manipulation`
 - File: `6-set.js`
 
- Done? Help Get a sandbox
 
 ### 7\. More set data structure
 
@@ -399,7 +464,7 @@ bob@dylan:~$
 - Directory: `0x03-ES6_data_manipulation`
 - File: `7-has_array_values.js`
 
- Done? Help Get a sandbox
+
 
 ### 8\. Clean set
 
@@ -432,7 +497,7 @@ bob@dylan:~$
 - Directory: `0x03-ES6_data_manipulation`
 - File: `8-clean_set.js`
 
- Done? Help Get a sandbox
+
 
 ### 9\. Map data structure
 
@@ -476,7 +541,7 @@ bob@dylan:~$
 - Directory: `0x03-ES6_data_manipulation`
 - File: `9-groceries_list.js`
 
- Done? Help Get a sandbox
+ 
 
 ### 10\. More map data structure
 
@@ -527,7 +592,7 @@ bob@dylan:~$
 
 ### 11\. Weak link data structure
 
-# advanced
+# Advanced
 
 Export a `const` instance of `WeakMap` and name it `weakMap`.
 
